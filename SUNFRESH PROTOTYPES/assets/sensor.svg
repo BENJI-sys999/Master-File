@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+  <rect width="120" height="80" rx="8" fill="#fff"/>
+  <circle cx="60" cy="40" r="14" fill="#06b6d4"/>
+  <text x="10" y="74" font-size="9" fill="#6b6b6b">Sensor</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+  <rect width="120" height="80" rx="8" fill="#fff"/>
+  <rect x="16" y="24" width="88" height="36" rx="4" fill="#e6f7fb"/>
+  <g fill="#06b6d4">
+    <rect x="22" y="30" width="18" height="10" rx="1"/>
+    <rect x="44" y="30" width="18" height="10" rx="1"/>
+    <rect x="66" y="30" width="18" height="10" rx="1"/>
+    <rect x="88" y="30" width="12" height="10" rx="1"/>
+  </g>
+  <text x="10" y="74" font-size="9" fill="#6b6b6b">Solar</text>
+</svg>

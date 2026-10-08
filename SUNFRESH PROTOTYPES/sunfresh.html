@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SunFresh Technologies Nigeria Limited — CCTV & Security</title>
+    <meta name="description" content="SunFresh Technologies: CCTV installation, management, video door phones, access control and security solutions in Nigeria." />
+    <link rel="stylesheet" href="sunfresh.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  </head>
+
+  <body>
+    <header class="sf-header">
+      <div class="sf-container">
+        <h1 class="logo">SunFresh Technologies</h1>
+        <nav class="sf-nav" aria-label="Main navigation">
+          <a href="sunfresh.html">Home</a>
+          <a href="services.html">Products & Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="sf-container hero-inner">
+          <div class="hero-copy">
+            <h2 id="hero-heading">Secure your space with professional CCTV & access solutions</h2>
+            <p>Installation, monitoring, maintenance and smart video door systems for homes and businesses across Nigeria.</p>
+            <div class="hero-cta">
+              <a class="btn" href="services.html">View Services</a>
+              <a class="btn ghost" href="#contact">Request a Quote</a>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <img src="assets/cctv.svg" alt="CCTV illustration">
+          </div>
+        </div>
+      </section>
+
+      <section class="sf-container about" aria-labelledby="about-heading">
+        <h3 id="about-heading">About SunFresh</h3>
+        <p>SunFresh Technologies provides end-to-end security solutions — from consultation and site survey to installation, remote monitoring and ongoing maintenance. We work with businesses, estates and homeowners.</p>
+      </section>
+
+      <section class="sf-container services-overview" aria-labelledby="services-heading">
+        <h3 id="services-heading">Core Services</h3>
+        <div class="grid">
+          <article class="card" aria-labelledby="s1">
+            <img src="assets/cctv.svg" alt="CCTV" class="icon">
+            <h4 id="s1">CCTV Installation</h4>
+            <p>Professional camera installation, cabling, and recorder setup with remote access.</p>
+          </article>
+
+          <article class="card" aria-labelledby="s2">
+            <img src="assets/video-door.svg" alt="Video Door" class="icon">
+            <h4 id="s2">Video Door Phones</h4>
+            <p>Smart door intercoms with video, two-way audio and mobile integration.</p>
+          </article>
+
+          <article class="card" aria-labelledby="s3">
+            <img src="assets/access.svg" alt="Access Control" class="icon">
+            <h4 id="s3">Access Control</h4>
+            <p>Card readers, biometric entry and secure door controllers for staff and visitors.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sf-container featured-products" aria-labelledby="featured-heading">
+        <h3 id="featured-heading">Featured Products</h3>
+        <div class="grid">
+          <div class="card product">
+            <img src="assets/solar-panel.svg" class="icon" alt="Solar">
+            <h4>Solar Panels</h4>
+            <p>Panels & mounting kits to keep your security systems running.</p>
+            <div style="margin-top:.6rem"><button class="btn request-quote" data-product="Solar Panels">Request Quote</button></div>
+          </div>
+
+          <div class="card product">
+            <img src="assets/wire.svg" class="icon" alt="Wires">
+            <h4>Wires & Cables</h4>
+            <p>High-quality Cat6 and coaxial cable for reliable connectivity.</p>
+            <div style="margin-top:.6rem"><button class="btn request-quote" data-product="Wires & Cables">Request Quote</button></div>
+          </div>
+
+          <div class="card product">
+            <img src="assets/inverter.svg" class="icon" alt="Inverter">
+            <h4>Inverters & UPS</h4>
+            <p>Backup power solutions tailored to surveillance needs.</p>
+            <div style="margin-top:.6rem"><button class="btn request-quote" data-product="Inverters & UPS">Request Quote</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="sf-container contact" aria-labelledby="contact-heading">
+        <h3 id="contact-heading">Contact & Quote</h3>
+        <form id="sfContact" class="contact-form" novalidate>
+          <div class="row"><label>Name<input name="name" required></label></div>
+          <div class="row"><label>Email<input name="email" type="email" required></label></div>
+          <div class="row"><label>Phone<input name="phone" required></label></div>
+          <div class="row"><label>Message<textarea name="message" rows="4" required></textarea></label></div>
+          <div class="row"><button class="btn" type="submit">Send Request</button></div>
+        </form>
+      </section>
+
+    </main>
+
+    <footer class="sf-footer">
+      <div class="sf-container">
+        <p>&copy; SunFresh Technologies Nigeria Limited — CCTV & Security Solutions</p>
+      </div>
+    </footer>
+
+    <!-- Quote modal -->
+    <div id="sfModal" class="sf-modal" aria-hidden="true">
+      <div class="sf-modal-content" role="dialog" aria-modal="true" aria-labelledby="sfModalTitle">
+        <button id="sfModalClose" class="sf-modal-close" aria-label="Close">×</button>
+        <h3 id="sfModalTitle">Request a Quote</h3>
+        <form id="sfQuoteForm">
+          <input type="hidden" name="product" id="quoteProduct">
+          <div class="row"><label>Name<input name="name" required></label></div>
+          <div class="row"><label>Email<input name="email" type="email" required></label></div>
+          <div class="row"><label>Phone<input name="phone" required></label></div>
+          <div class="row"><label>Message<textarea name="message" rows="3"></textarea></label></div>
+          <div class="row"><button class="btn" type="submit">Send Quote Request</button></div>
+        </form>
+        <div id="sfModalStatus" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <script src="sunfresh.js"></script>
+  </body>
+</html>

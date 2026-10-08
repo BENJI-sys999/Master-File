@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+  <rect width="120" height="80" rx="8" fill="#fffef6"/>
+  <rect x="30" y="28" width="60" height="28" rx="6" fill="#f7e7a9" stroke="#e6cf6b"/>
+  <text x="10" y="74" font-size="9" fill="#6b6b6b">Cheese</text>
+</svg>

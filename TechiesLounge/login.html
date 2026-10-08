@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="website.css">
+    <title>Login - TechiesLounge</title>
+    <style>
+      .auth-container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      .auth-card {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        max-width: 420px;
+        width: 100%;
+      }
+      .auth-card h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: var(--text);
+        text-align: center;
+      }
+      .auth-card p {
+        text-align: center;
+        color: var(--muted);
+        margin-bottom: 30px;
+      }
+      .auth-form {
+        display: grid;
+        gap: 16px;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+      .form-group label {
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: var(--text);
+        font-size: 0.95rem;
+      }
+      .form-group input {
+        padding: 12px;
+        border: 2px solid rgba(2, 6, 23, 0.1);
+        border-radius: 8px;
+        font-family: inherit;
+        font-size: 1rem;
+        transition: border-color .3s, box-shadow .3s;
+      }
+      .form-group input:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(107, 124, 255, 0.1);
+      }
+      .login-button {
+        background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: transform .3s, box-shadow .3s;
+        box-shadow: 0 8px 20px rgba(107, 124, 255, 0.3);
+        margin-top: 10px;
+      }
+      .login-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(107, 124, 255, 0.4);
+      }
+      .auth-footer {
+        text-align: center;
+        margin-top: 20px;
+        color: var(--muted);
+      }
+      .auth-footer a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color .3s;
+      }
+      .auth-footer a:hover {
+        color: var(--accent-dark);
+        text-decoration: underline;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 8px 16px;
+        background: rgba(107, 124, 255, 0.1);
+        color: var(--accent);
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background .3s, color .3s;
+      }
+      .back-link:hover {
+        background: rgba(107, 124, 255, 0.2);
+        color: var(--accent-dark);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="auth-card">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        <h2>Welcome Back</h2>
+        <p>Sign in to your account</p>
+        
+        <form class="auth-form">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="your@email.com" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required />
+          </div>
+          
+          <button type="submit" class="login-button">Login</button>
+        </form>
+        
+        <div class="auth-footer">
+          <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="navigation.js"></script>
+    <script src="animations.js"></script>
+    <script src="forms.js"></script>
+
+  </body>
+</html>

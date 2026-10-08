@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Brezzy — Tech Gadgets</title>
+  <link rel="stylesheet" href="brezzy.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#">Brezzy</a>
+      <div style="display:flex;align-items:center;gap:12px">
+        <input id="searchInput" placeholder="Search products" aria-label="Search products">
+        <nav class="actions">
+          <a href="#products">Products</a>
+          <a href="#features">Features</a>
+          <a id="cartBtn" class="cart" href="#">Cart <span id="cartCount">0</span></a>
+        </nav>
+        <button id="themeBtn" class="btn ghost" title="Toggle theme">Light</button>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Classy, Modern Tech — Designed for life</h1>
+          <p>Discover curated gadgets with premium finishes, smart features, and effortless design.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#products">Shop Now</a>
+            <a class="btn ghost" href="#features">Why Brezzy</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="device device-1"></div>
+          <div class="device device-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section features">
+      <div class="container">
+        <h2>Why Brezzy</h2>
+        <div class="grid features-grid">
+          <div class="card feature-card">
+            <h3>Premium Materials</h3>
+            <p>Metal and glass finishes that look and feel luxurious.</p>
+          </div>
+          <div class="card feature-card">
+            <h3>Smart by Design</h3>
+            <p>Thoughtful interfaces and intuitive interactions.</p>
+          </div>
+          <div class="card feature-card">
+            <h3>Sustainable</h3>
+            <p>Minimal packaging and energy-efficient engineering.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section products">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Gadgets</h2>
+          <div class="filters">
+            <div id="categoryFilters" class="category-filters">
+              <button class="cat-btn" data-cat="all">All</button>
+              <button class="cat-btn" data-cat="phone">Phones</button>
+              <button class="cat-btn" data-cat="accessory">Accessories</button>
+            </div>
+            <select id="sortSelect">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: Low → High</option>
+              <option value="price-desc">Price: High → Low</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="productsGrid" class="grid products-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section newsletter">
+      <div class="container newsletter-inner">
+        <div>
+          <h3>Get early access & updates</h3>
+          <p>Join our newsletter for exclusive drops and offers.</p>
+        </div>
+        <form id="newsletterForm" class="newsletter-form">
+          <input id="emailInput" type="email" placeholder="Your email" required>
+          <button class="btn primary" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Brezzy Tech Gadgets</div>
+      <div class="small-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cartModal" class="cart-modal" hidden>
+    <div class="cart-panel">
+      <button id="closeCart">Close</button>
+      <h3>Your cart</h3>
+      <ul id="cartList" class="cart-list"></ul>
+      <div class="cart-footer">
+        <div class="total">Total: $<span id="cartTotal">0.00</span></div>
+        <button id="checkoutBtn" class="btn primary">Checkout</button>
+      </div>
+
+      <div id="checkoutArea" class="checkout-area" hidden>
+        <h4>Checkout</h4>
+        <form id="checkoutForm">
+          <label>
+            Full name
+            <input id="custName" type="text" required>
+          </label>
+          <label>
+            Email
+            <input id="custEmail" type="email" required>
+          </label>
+          <label>
+            Shipping address
+            <input id="custAddress" type="text" required>
+          </label>
+          <label>
+            Payment method
+            <select id="custPayment">
+              <option value="card">Card (simulated)</option>
+              <option value="cod">Cash on delivery</option>
+            </select>
+          </label>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button id="placeOrder" class="btn primary" type="submit">Place order</button>
+            <button id="cancelCheckout" type="button" class="btn ghost">Cancel</button>
+          </div>
+        </form>
+        <div id="checkoutMessage" class="checkout-message" hidden></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="productModal" class="product-modal" hidden>
+    <div class="product-panel">
+      <button id="closeProduct">Close</button>
+      <div id="productDetail"></div>
+    </div>
+  </div>
+
+  <script src="brezzy.js"></script>
+</body>
+</html>

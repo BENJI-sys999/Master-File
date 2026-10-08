@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="website.css">
+    <title>Contact - TechiesLounge</title>
+  </head>
+  <body>
+    <!-- navigation bar-->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="heading">TechiesLounge</div>
+          <ul class="links">
+             <li><a href="index.html">Home</a></li>
+             <li><a href="services.html">Services</a></li>
+             <li><a href="portfolio.html">Portfolio</a></li>
+             <li><a href="team.html">Team</a></li>
+             <li><a href="testimonials.html">Testimonials</a></li>
+             <li><a href="blog.html">Blog</a></li>
+             <li><a href="faq.html">FAQ</a></li>
+             <li><a href="pricing.html">Pricing</a></li>
+             <li><a href="about.html">About Us</a></li>
+             <li><a href="contact.html">Contact</a></li>
+             <li class="auth-links"><a href="login.html">Login</a><a href="signup.html">Sign Up</a></li>
+          </ul>
+      </div>
+    </nav>
+
+    <!--Contact section-->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="contact-text">Have a project in mind or want to learn more about our services? We'd love to hear from you! Reach out to us through the form below or connect with us on social media.</p>
+        
+        <!-- Contact Methods -->
+        <div class="contact-methods">
+          <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <h3>Email Us</h3>
+            <p>For general inquiries and support</p>
+            <a href="mailto:info@techieslounge.com">info@techieslounge.com</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h3>Call Us</h3>
+            <p>Available 24/7 for urgent matters</p>
+            <a href="tel:+2348012345678">+234 801 234 5678</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <h3>Visit Us</h3>
+            <p>Come see our office in person</p>
+            <p>Lagos, Nigeria</p>
+          </div>
+        </div>
+
+        <!-- Contact Form with Type Selection -->
+        <div class="contact-form-container">
+          <h3>Send us a Message</h3>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="contact-type">Inquiry Type *</label>
+              <select id="contact-type" name="contact-type" required>
+                <option value="">Select Type</option>
+                <option value="general">General Inquiry</option>
+                <option value="sales">Sales / Pricing</option>
+                <option value="support">Technical Support</option>
+                <option value="partnership">Partnership / Collaboration</option>
+                <option value="feedback">Feedback / Suggestion</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <input type="text" id="name" placeholder="Your Name" required />
+              <input type="email" id="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-row">
+              <input type="text" id="company" placeholder="Your Company (Optional)" />
+              <input type="tel" id="phone" placeholder="Your Phone (Optional)" />
+            </div>
+            <input type="text" id="subject" placeholder="Subject" required />
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <label class="checkbox-label">
+              <input type="checkbox" id="subscribe" name="subscribe" />
+              Subscribe to our newsletter for updates and tips
+            </label>
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="contact-social">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">LinkedIn</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer section-->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 TechiesLounge. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="navigation.js"></script>
+    <script src="animations.js"></script>
+    <script src="forms.js"></script>
+
+  </body>
+</html>

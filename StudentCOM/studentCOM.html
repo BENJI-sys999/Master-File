@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StudentComm — Student Communication</title>
+  <link rel="stylesheet" href="studentCOM.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>StudentComm</h1>
+    <div class="user-area">
+      <div class="avatar" id="avatar">?</div>
+      <input id="usernameInput" placeholder="Your name" aria-label="Your name">
+      <button id="setNameBtn">Set</button>
+      <select id="langSelect" aria-label="Language selector">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+      </select>
+      <button id="contrastBtn" title="Toggle high contrast">A11y</button>
+      <button id="layoutBtn" title="Change layout">Layout</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="rooms-header">
+        <strong>Rooms</strong>
+        <button id="newRoomBtn" title="Create room">+</button>
+      </div>
+      <ul id="roomsList" class="rooms"></ul>
+      <div class="announce-box">
+        <strong>Announcement</strong>
+        <div id="announcement" class="announcement">No announcements yet.</div>
+        <input id="announceInput" placeholder="Write announcement">
+        <button id="announceBtn">Post</button>
+      </div>
+      <div class="panel resources">
+        <strong>Resources</strong>
+        <ul id="resourcesList" class="resources-list">
+          <li><a href="#">Student handbook</a></li>
+          <li><a href="#">Study groups</a></li>
+        </ul>
+      </div>
+
+      <div class="panel events">
+        <strong>Events</strong>
+        <ul id="eventsList" class="events-list">
+          <li>No upcoming events.</li>
+        </ul>
+      </div>
+
+      <div class="panel poll">
+        <strong>Quick Poll</strong>
+        <div id="pollBox" class="poll-box">No poll yet.</div>
+      </div>
+
+      <div class="panel highlights">
+        <strong>Student Highlights</strong>
+        <ul id="highlightsList" class="highlights-list">
+          <li>Share achievements to inspire others.</li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="chat">
+      <div class="chat-header">
+        <h2 id="roomTitle">—</h2>
+      </div>
+      <div id="messages" class="messages" role="log" aria-live="polite"></div>
+      <form id="sendForm" class="send-form">
+        <input id="messageInput" placeholder="Type a message" autocomplete="off">
+        <button type="submit">Send</button>
+      </form>
+    </section> 
+  </main>
+
+  <script src="studentCOM.js"></script>
+</body>
+</html>

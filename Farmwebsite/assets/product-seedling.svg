@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+  <rect width="120" height="80" rx="8" fill="#fffef8"/>
+  <path d="M60 44c6-12 18-16 28-10" stroke="#3a8" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="60" cy="44" r="6" fill="#3a8"/>
+  <text x="10" y="74" font-size="9" fill="#6b6b6b">Seedling</text>
+</svg>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Sunny Farm — Animal Husbandry & Products</title>
+	<meta name="description" content="Small family farm offering animal husbandry information and farm products." />
+	<meta property="og:title" content="Sunny Farm — Animal Husbandry & Products">
+	<meta property="og:description" content="Family farm raising poultry, goats and cattle — farm-fresh products." />
+	<meta name="theme-color" content="#2a7a2a">
+	<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<h1 class="site-title">Sunny Farm</h1>
+			<nav class="main-nav">
+				<a href="#about">About</a>
+				<a href="#animals">Animals</a>
+				<a href="#products">Products</a>
+				<a href="#contact">Contact</a>
+			</nav>
+			<div class="header-actions">
+				<button id="adminToggle" class="cart-btn" aria-label="Toggle admin">⚙️</button>
+				<button id="cartButton" class="cart-btn" aria-label="View cart">🧺 <span id="cartCount" class="cart-count">0</span></button>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero">
+			<div class="container hero-inner">
+				<div class="hero-copy">
+					<h2>Healthy animals. Natural products.</h2>
+					<p>We raise free-range poultry, grass-fed goats and cattle, and sell farm-fresh products — ethically and sustainably.</p>
+					<a class="cta" href="#products">Shop Products</a>
+				</div>
+				<div class="hero-illustration">
+					<img src="assets/hero.svg" alt="Illustration of farm" class="hero-illus">
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="container about">
+			<h3>About Sunny Farm</h3>
+			<p>Family-run farm focused on sustainable animal husbandry, humane care, and quality local products.</p>
+		</section>
+
+		<section id="animals" class="container animals">
+			<h3>Our Animals</h3>
+			<div class="grid">
+				<article class="card">
+					<div class="media"><img src="assets/chicken.svg" alt="Chicken"></div>
+					<h4>Poultry</h4>
+					<p>Free-range chickens for eggs and breeding stock. Learn about feeding and coop care.</p>
+					<button class="more" data-type="animal" data-id="chicken">Learn more</button>
+				</article>
+
+				<article class="card">
+					<div class="media"><img src="assets/goat.svg" alt="Goat"></div>
+					<h4>Goats</h4>
+					<p>Grass-fed dairy and meat goats raised with pasture-first management.</p>
+					<button class="more" data-type="animal" data-id="goat">Learn more</button>
+				</article>
+
+				<article class="card">
+					<div class="media"><img src="assets/cow.svg" alt="Cow"></div>
+					<h4>Cattle</h4>
+					<p>Small herd of cattle for breeding and sustainable beef production.</p>
+					<button class="more" data-type="animal" data-id="cow">Learn more</button>
+				</article>
+			</div>
+		</section>
+
+		<section id="products" class="container products">
+			<h3>Products</h3>
+			<div id="productsGrid" class="grid">
+				<!-- Products will be rendered here by products.js + script.js -->
+			</div>
+		</section>
+
+		<section id="manage" class="container" style="display:none">
+			<h3>Manage Products (Admin)</h3>
+			<form id="productForm">
+				<div class="form-row">
+					<label for="pname">Product name</label>
+					<input id="pname" name="pname" required>
+				</div>
+				<div class="form-row">
+					<label for="pprice">Price (leave blank if contact)</label>
+					<input id="pprice" name="pprice" inputmode="decimal">
+				</div>
+				<div class="form-row">
+					<label for="pdesc">Description</label>
+					<textarea id="pdesc" name="pdesc" rows="2"></textarea>
+				</div>
+				<div class="form-row">
+					<label for="pimg">Image path (optional)</label>
+					<input id="pimg" name="pimg" placeholder="assets/product-x.svg">
+				</div>
+				<div class="form-row">
+					<button type="submit" class="cta">Add product</button>
+				</div>
+			</form>
+		</section>
+
+		<section class="container testimonials">
+			<h3>What Customers Say</h3>
+			<div class="grid">
+				<div class="card">
+					<p>"The eggs are always fresh and flavorful — our favorite local find."</p>
+					<p class="muted">— Maria P.</p>
+				</div>
+				<div class="card">
+					<p>"Great service and humane animal care. Highly recommended."</p>
+					<p class="muted">— Aaron K.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="container faq">
+			<h3>FAQ</h3>
+			<div class="card">
+				<p class="q"><strong>Do you deliver?</strong></p>
+				<p class="a">We offer local delivery and pickup. Contact us for scheduling.</p>
+				<p class="q"><strong>Are your animals vaccinated?</strong></p>
+				<p class="a">Yes — we follow standard vaccination and health practices appropriate for each species.</p>
+			</div>
+		</section>
+
+		<section id="contact" class="container contact">
+			<h3>Contact & Orders</h3>
+			<form id="contactForm" novalidate>
+				<div class="form-row">
+					<label for="name">Name</label>
+					<input id="name" name="name" required>
+				</div>
+				<div class="form-row">
+					<label for="email">Email</label>
+					<input id="email" name="email" type="email" required>
+				</div>
+				<div class="form-row">
+					<label for="message">Message</label>
+					<textarea id="message" name="message" rows="4" required></textarea>
+				</div>
+				<div class="form-row">
+					<button type="submit" class="cta">Send Message</button>
+				</div>
+			</form>
+		</section>
+
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<p>&copy; Sunny Farm — Local, sustainable animal husbandry & products.</p>
+		</div>
+	</footer>
+
+	<div id="modal" class="modal" aria-hidden="true">
+		<div class="modal-content">
+			<button id="modalClose" class="modal-close">×</button>
+			<div id="modalBody"></div>
+		</div>
+	</div>
+
+	<script src="products.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

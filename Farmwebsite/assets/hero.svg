@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260">
+  <rect width="400" height="260" rx="16" fill="#fff"/>
+  <g transform="translate(20,20)">
+    <rect x="0" y="120" width="360" height="80" rx="10" fill="#d6f3d6"/>
+    <circle cx="60" cy="90" r="30" fill="#f3c677"/>
+    <ellipse cx="180" cy="110" rx="48" ry="28" fill="#b38b58"/>
+    <rect x="260" y="86" width="70" height="40" rx="8" fill="#d96b6b"/>
+  </g>
+  <text x="26" y="240" font-size="12" fill="#6b6b6b">Sunny Farm</text>
+</svg>

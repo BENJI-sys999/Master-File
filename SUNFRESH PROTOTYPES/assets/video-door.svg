@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+  <rect width="120" height="80" rx="8" fill="#fff"/>
+  <rect x="36" y="20" width="48" height="40" rx="6" fill="#efefef"/>
+  <circle cx="60" cy="40" r="8" fill="#d1d1d1"/>
+  <text x="10" y="74" font-size="9" fill="#6b6b6b">Video Door</text>
+</svg>

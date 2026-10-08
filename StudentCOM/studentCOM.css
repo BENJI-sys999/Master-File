@@ -1,0 +1,62 @@
+:root{--bg:#f6f8fb;--card:#ffffff;--accent:#2b6ef6;--muted:#667085}
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif}
+html,body{height:100%;margin:0;background:var(--bg);color:#0b1220}
+.topbar{height:60px;background:var(--card);display:flex;align-items:center;justify-content:space-between;padding:0 16px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.topbar h1{margin:0;font-size:18px}
+.user-area input{padding:6px 8px;border:1px solid #e6e9ef;border-radius:6px;margin-right:8px}
+.layout{display:flex;height:calc(100vh - 60px)}
+.sidebar{width:280px;padding:12px;display:flex;flex-direction:column;gap:12px}
+.rooms-header{display:flex;justify-content:space-between;align-items:center}
+.rooms{list-style:none;padding:0;margin:6px 0;overflow:auto}
+.rooms li{padding:8px 10px;border-radius:8px;cursor:pointer;color:var(--muted)}
+.rooms li.active{background:linear-gradient(90deg,var(--accent),#6b9bff);color:white}
+.announce-box{background:var(--card);padding:10px;border-radius:8px;border:1px solid #eef2ff}
+.announcement{min-height:42px;padding:6px;background:#fbfcff;border-radius:6px;margin:8px 0;color:#0b1220}
+.panel{background:var(--card);padding:10px;border-radius:8px;border:1px solid #eef2ff;margin-top:10px}
+.panel strong{display:block;margin-bottom:8px}
+.resources-list,.events-list,.highlights-list{list-style:none;padding:0;margin:0}
+.resources-list li a{color:var(--accent);text-decoration:none}
+.chat{flex:1;display:flex;flex-direction:column;padding:12px}
+.chat-header{padding:6px 8px}
+.messages{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
+.msg{max-width:72%;padding:10px;border-radius:12px;background:var(--card);box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.msg.me{margin-left:auto;background:linear-gradient(90deg,var(--accent),#6b9bff);color:white}
+.msg .meta{font-size:12px;color:var(--muted);margin-bottom:6px}
+.send-form{display:flex;gap:8px;padding:8px;border-top:1px solid #eef2ff}
+.send-form input{flex:1;padding:10px;border-radius:8px;border:1px solid #e6e9ef}
+.send-form button{background:var(--accent);color:white;border:0;padding:8px 12px;border-radius:8px}
+@media(max-width:800px){.sidebar{display:none}.layout{padding:0}}
+
+/* avatar + user */
+.user-area{display:flex;align-items:center;gap:8px}
+.avatar{width:34px;height:34px;border-radius:50%;background:#d9eaff;color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:600}
+
+/* poll */
+.poll-box{font-size:14px}
+.poll-option{display:flex;align-items:center;gap:8px;padding:6px;border-radius:6px;border:1px solid #eef2ff;margin-bottom:6px}
+.poll-option button{margin-left:auto;background:transparent;border:1px solid var(--accent);color:var(--accent);padding:6px 8px;border-radius:6px}
+
+/* high contrast mode */
+.high-contrast{--bg:#000;--card:#111;--accent:#ffd54f;--muted:#cccccc;color:#fff;background:#000}
+.high-contrast a{color:#ffd54f}
+
+/* alternate layout (split) */
+body.layout-split .layout{display:flex;}
+body.layout-split .sidebar{order:2;width:320px}
+body.layout-split .chat{order:1}
+body.layout-split .sidebar{border-left:1px solid rgba(16,24,40,.04)}
+
+/* Animations */
+@keyframes popIn {0%{transform:scale(.9);opacity:0}100%{transform:scale(1);opacity:1}}
+@keyframes slideUp {0%{transform:translateY(8px);opacity:0}100%{transform:translateY(0);opacity:1}}
+@keyframes highlightGlow {0%{box-shadow:0 0 0 rgba(255,213,79,0)}50%{box-shadow:0 0 10px rgba(255,213,79,.6)}100%{box-shadow:0 0 0 rgba(255,213,79,0)}}
+
+.rooms li.pop{animation:popIn 240ms cubic-bezier(.2,.9,.2,1)}
+.msg.msg-enter{animation:slideUp 220ms ease both}
+.poll-option.voted{animation:popIn 180ms ease both}
+.poll-option.highlight{animation:highlightGlow 800ms ease}
+
+/* subtle transitions for panels and header controls */
+.panel, .announce-box, .rooms li, .send-form input, .send-form button{transition:box-shadow .18s ease,transform .12s ease,background .12s ease}
+.user-area button, .user-area select{transition:background .12s ease,transform .08s ease}
+.user-area button:active, .rooms li:active{transform:scale(.98)}

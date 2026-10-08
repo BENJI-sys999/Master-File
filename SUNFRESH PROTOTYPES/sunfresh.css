@@ -1,0 +1,57 @@
+/* Simple clean stylesheet for SunFresh Technologies */
+.root{}
+:root{--bg:#ffffff;--text:#0b0b0b;--muted:#6b6b6b;--card:#ffffff;--accent:#f4f4f6;--brand:#0b0b0b;
+	--vivid1:#7c3aed; /* violet */
+	--vivid2:#06b6d4; /* cyan */
+	--vivid-accent: linear-gradient(135deg,var(--vivid1),var(--vivid2));
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI, Roboto, Arial, sans-serif;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+.sf-container{max-width:1000px;margin:0 auto;padding:1rem}
+.sf-header{border-bottom:1px solid var(--accent);background:var(--bg)}
+.sf-header .sf-container{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.logo{margin:0;font-size:1.25rem;font-weight:700}
+.sf-nav a{margin-left:1rem;color:var(--muted);text-decoration:none}
+.hero{padding:2.5rem 0}
+.hero-inner{display:grid;grid-template-columns:1fr 360px;gap:1rem;align-items:center}
+.hero-copy h2{margin:0 0 .5rem;font-size:1.6rem}
+.hero-copy p{margin:0 0 1rem;color:var(--muted)}
+.hero-art img{max-width:100%;height:auto}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;background:var(--vivid1);color:#fff;text-decoration:none;box-shadow:0 10px 30px rgba(124,58,237,0.12);border:none}
+.btn.ghost{background:transparent;color:var(--vivid1);border:1px solid rgba(124,58,237,0.12)}
+button.request-quote{cursor:pointer}
+.about{padding:1rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.card{background:linear-gradient(180deg,#ffffff,#fbfbff);padding:1rem;border-radius:12px;border:1px solid rgba(12,12,12,0.04);box-shadow:0 12px 36px rgba(7,12,34,0.04);position:relative;overflow:hidden}
+.card::after{content:'';position:absolute;right:-40px;top:-40px;width:160px;height:160px;background:var(--vivid-accent);opacity:.06;transform:rotate(25deg);filter:blur(18px)}
+.icon{height:72px;display:block;margin:0 auto 0.5rem}
+.contact{padding:1rem 0}
+.contact-form .row{margin-bottom:.75rem}
+input,textarea{width:100%;padding:.6rem;border:1px solid var(--accent);border-radius:8px}
+.sf-footer{border-top:1px solid var(--accent);padding:1rem 0;margin-top:2rem;text-align:center;color:var(--muted)}
+
+.product-title{color:var(--vivid1);font-weight:700}
+.badge{display:inline-block;margin-top:.5rem;padding:.25rem .5rem;border-radius:999px;background:linear-gradient(90deg,#ffd70020,#ffd70010);color:var(--vivid2);font-weight:700;font-size:.85rem}
+.product .icon{filter:grayscale(0.02)}
+.grid.products .card{min-height:170px}
+.featured-products .card{display:flex;flex-direction:column;align-items:center;text-align:center}
+
+/* bolder hover */
+.card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 18px 60px rgba(7,12,34,0.08);transition:all .22s ease}
+
+/* Modal for quote */
+.sf-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,8,12,0.5);z-index:60}
+.sf-modal[aria-hidden="false"]{display:flex}
+.sf-modal-content{background:#fff;padding:1rem;border-radius:10px;max-width:520px;width:100%;box-shadow:0 16px 60px rgba(7,12,34,0.12);position:relative}
+.sf-modal-close{position:absolute;right:.6rem;top:.4rem;border:none;background:transparent;font-size:1.4rem;cursor:pointer}
+.sf-modal form .row{margin-bottom:.6rem}
+.sf-modal form input,.sf-modal form textarea{width:100%;padding:.6rem;border:1px solid var(--accent);border-radius:6px}
+.sf-modal #sfModalStatus{margin-top:.6rem}
+
+@media(max-width:760px){.hero-inner{grid-template-columns:1fr}.sf-nav a{display:inline-block;margin:.5rem 0}}
+
+/* product badges and unique look */
+.badge{background:linear-gradient(90deg,var(--vivid1),var(--vivid2));color:#fff;padding:.3rem .6rem;border-radius:999px;font-weight:700}
+.product-title{display:block;margin-top:.25rem}
+.featured-products .card .icon{height:88px}
+

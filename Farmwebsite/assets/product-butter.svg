@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+  <rect width="120" height="80" rx="8" fill="#fffaf0"/>
+  <rect x="36" y="36" width="48" height="18" rx="4" fill="#f3c677"/>
+  <text x="10" y="74" font-size="9" fill="#6b6b6b">Butter</text>
+</svg>
