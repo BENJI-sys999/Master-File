@@ -1,0 +1,34 @@
+body{
+     font-family: Arial;
+     background-color: #76d2db;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     margin: 0;
+}
+
+.container{
+    background-color: #aacddc;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: o 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1{
+    color: #81a6c6;
+    margin-bottom: 20px;
+}
+
+button{
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
